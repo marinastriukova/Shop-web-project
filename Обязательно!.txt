@@ -1,0 +1,10 @@
+Установить npm install html-loader@^0.5.5, 
+
+use: {
+          loader: 'html-loader',
+          options: {
+            interpolate: true
+          }
+        },
+
+${require('./partials/tru.html')}.
