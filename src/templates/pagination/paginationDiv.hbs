@@ -1,0 +1,18 @@
+{{#each this}}
+   <div class="pagination-group">
+            <span class="pagination-name-group">id: {{id}}</span>
+            <span class="pagination-next">Дивитися всі</span>       
+            <ul class="pagination-card-all">
+               {{#each this}}
+    <li class="pagination-card-block">
+                        <div class="pagination-card">                        
+                        <img class="img1" loading="lazy" src="{previewURL}}" data-src="{{largeImageURL}}" alt=" non" />
+                        <p class="pagination-name-card">{{tags}}</p>
+                        <p class="pagination-price">{{likes}}</p>
+                    </div>
+                </li>
+    
+{{/each}}
+            </ul>
+        </div>
+{{/each}}
