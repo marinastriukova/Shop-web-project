@@ -1,0 +1,66 @@
+.pagination-card-all{
+   @extend %list-throw
+}
+.section-pagination{
+    @extend %section-style;
+   @extend %container-style
+}
+.pagination-name-group-div{
+    padding: 25px 0px;
+}
+.pagination-card{
+    height: 350px;
+    background-color: aqua;
+}
+.img1{
+    height: 275px;
+}
+.pagination-card-block{
+    margin-bottom: 30px;
+}
+.pagination-btn{
+    display: flex;
+    width: 151.92px;
+height: 50px;
+    @extend %list-throw;
+    margin: 0px;
+    & .activ{
+        color: $white-color;
+    background-color: $bold-text-color;
+    }
+}
+.pagination-catigories-btn{
+    padding: 20px;
+    text-align: center;
+}
+// .pagination-catigories-btn:hover{
+//     color: $white-color;
+//     background-color: $bold-text-color;
+// }
+.section-footer{
+    
+    @extend %section-style;
+    padding-bottom: 0px;
+    padding: 38px 0px;
+    
+}
+.footer-container{
+  
+    @extend %container-style;
+    
+}
+.reserved{
+    margin-left: 5px;
+    border-left:2px solid lightgray;
+    padding-left: 10px;
+}
+.footer-container span{
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 15px;
+// height: 44px;
+// padding: 38px 0px;
+letter-spacing: 0.03em;
+}
