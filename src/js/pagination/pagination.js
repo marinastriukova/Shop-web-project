@@ -7,6 +7,7 @@ const renderDiv = document.querySelector('.pagination-div')
 
 
 
+loginning()
 setInterval(loginning, 3480000)
 
 function loginning(params) {        
