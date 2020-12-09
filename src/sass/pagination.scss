@@ -1,23 +1,39 @@
 .pagination-card-all {
   @extend %list-throw;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    overflow: hidden;
+    & :not(:last-child) {
+      margin-right: 20px;
+    }
+  }
 }
 .section-pagination {
   //   background-color: #f5f6fb;
-  @extend %section-style;
+  //   @extend %section-style;
   @extend %container-style;
+  padding: 0px 15px;
 }
 .pagination-name-group-div {
   padding: 25px 0px;
 }
 .pagination-card {
   height: 350px;
+  min-width: 290px;
   background-color: aqua;
+  @media screen and (min-width: 768px) {
+    min-width: 352px;
+  }
+  @media screen and (min-width: 1280px) {
+    min-width: 285px;
+  }
 }
 .img1 {
   height: 275px;
 }
 .pagination-card-block {
   margin-bottom: 30px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .pagination-btn {
   display: flex;
@@ -82,13 +98,15 @@
     margin-left: 15px;
   }
 }
-.footer-container span {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0.03em;
+.footer-container {
+  & span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+  }
 }
 .section-btn {
   background-color: #f5f6fb;
@@ -98,4 +116,14 @@
   @media screen and (min-width: 768px) {
     padding-bottom: 60px;
   }
+}
+.namePrice {
+  height: 75px;
+  & p {
+    @extend %text-throw;
+  }
+  padding: 20px 0px;
+}
+.pagination-name-card {
+  margin-bottom: 5px !important;
 }
