@@ -74,5 +74,5 @@ function fun4 () {
 }
 
 function fun5 () {
-    title.innerHTML = 'Not found';
+    // title.innerHTML = 'Not found';
 }
