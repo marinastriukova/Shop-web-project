@@ -1,22 +1,45 @@
 
-// import hendelLi from '../../templates/pagination//paginationLi.hbs'
+
 import hendelDiv from '../../templates/pagination/paginationDiv.hbs'
-// const groupName = document.querySelector('.pagination-div')
 const btn = document.getElementsByClassName('pagination-catigories-btn')
 const renderDiv = document.querySelector('.pagination-div')
-// console.log(renderGroup);
-function renLi() {
+
+
+setInterval(loginning(), 58000)
+
+function loginning(params) {        
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");    
+    const raw = JSON.stringify({"email":"andreyz11288@gmail.com","password":"123456"});    
+    const requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+    
+    
+    fetch("https://callboard-backend.herokuapp.com/auth/login", requestOptions)
+    .then(response => response.json())
+        .then(result => {            
+            const token = result.accessToken
+            renLi(token)
+            
+        })
+    .catch(error => console.log('error', error));
+}
+
+
+function renLi(token) {
     let page = 1
     btn[0].addEventListener('click', btn1)
     btn[1].addEventListener('click', btn2)
     btn[2].addEventListener('click', btn3)
     const URL = "https://callboard-backend.herokuapp.com/call?page="
-        
-    
-    
+            
     const options = {
         headers: {
-            Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmNmODc2ZDJkNTVkOTAwMTdhZTMzOTciLCJzaWQiOiI1ZmNmZjYwMjI4YjhhNzAwMTc5ODMyNTMiLCJpYXQiOjE2MDc0NjQ0NTAsImV4cCI6MTYwNzQ2ODA1MH0.hMvcJNhFoPUUiHHAPpAb-JUa8geUs7yjO65xur79XxI"
+            Authorization: `${token}`
         }
     }
     
@@ -56,4 +79,3 @@ function renLi() {
         renderDiv.insertAdjacentHTML('afterbegin', markup);
     }
 }
-renLi()
