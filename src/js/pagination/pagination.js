@@ -5,7 +5,9 @@ const btn = document.getElementsByClassName('pagination-catigories-btn')
 const renderDiv = document.querySelector('.pagination-div')
 
 
-setInterval(loginning(), 58000)
+
+
+setInterval(loginning, 3480000)
 
 function loginning(params) {        
     const myHeaders = new Headers();
