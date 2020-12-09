@@ -2,6 +2,7 @@
   @extend %list-throw;
 }
 .section-pagination {
+  //   background-color: #f5f6fb;
   @extend %section-style;
   @extend %container-style;
 }
@@ -24,9 +25,17 @@
   height: 50px;
   @extend %list-throw;
   margin: 0px;
+  padding-left: 15px;
+  cursor: pointer;
   & .activ {
     color: $white-color;
     background-color: $bold-text-color;
+  }
+  @media screen and (min-width: 768px) {
+    padding-left: 22px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-left: 20px;
   }
 }
 .pagination-catigories-btn {
@@ -38,14 +47,40 @@
   @extend %section-style;
   padding-bottom: 0px;
   padding: 38px 0px;
+  @media screen and (min-width: 768px) {
+    padding: 34px 0px;
+  }
 }
 .footer-container {
   @extend %container-style;
+
+  & span {
+    & a {
+      color: $bold-text-color;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
+}
+.copy {
+  color: #000000;
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+.head {
+  color: #ff6b09;
+  font-size: 16px !important;
 }
 .reserved {
+  margin-right: 30px;
   margin-left: 5px;
   border-left: 2px solid lightgray;
   padding-left: 10px;
+  @media screen and (min-width: 768px) {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
 }
 .footer-container span {
   font-family: Montserrat;
@@ -56,10 +91,11 @@
   letter-spacing: 0.03em;
 }
 .section-btn {
+  background-color: #f5f6fb;
   @media screen and (min-width: 320px) {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
   @media screen and (min-width: 768px) {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
   }
 }
