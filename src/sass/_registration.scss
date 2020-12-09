@@ -105,6 +105,12 @@
         height: 18px;
         margin-right: 10px;
     }
+
+    &-text{
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 14px;
+    }
 }
 
 .registration-form{
@@ -121,6 +127,7 @@
         height: 56px;
         border: 1px solid #BBBBBB;
         font-size: 14px;
+        font-family: Roboto;
     }
 
     &-input::-webkit-input-placeholder{
