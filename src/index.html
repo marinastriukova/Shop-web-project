@@ -16,37 +16,7 @@
 
 <body>
 
-  <!--
-  registration
--->
-  <div class="registration-container">
-    <button class="registration-button" data-modal-open>Регистрация</button>
-    <div class="registration-modal-backdrop is-hidden" data-modal>
-      <div class="registration-modal-form">
-        <button class="registration-close-button" data-modal-close>
-          <svg class="registration-close-icon">
-            <use href="./images/sprite/symbol-defs.svg#icon-close-24px-1"></use>
-          </svg>
-        </button>
-        <p class="registration-text registration-text-title">Ви можете авторизуватися за допомогою Googlt Account:</p>
-        <button class="registration-button-google">
-          <svg class="registration-button-google-icon">
-            <use href="./images/sprite/symbol-defs.svg#icon-google-symbol-1"></use>
-          </svg>
-          <span class="registration-button-google-text">Google</span>
-        </button>
-        <p class="registration-text">Або зайти за допомогою імейлу і пароля, попередньо зареєструвавшись:</p>
-        <div class="registration-form">
-          <input type="email" class="registration-form-input registration-form-login" placeholder="E-mail" name="mail" id="mail">
-          <input type="password" class="registration-form-input" placeholder="Password" name="password" minlength="8" required>
-        </div>
-        <div class="registration-btn-container">
-          <button class="registration-button-entry">Увійти</button>
-          <button class="registration-button">Зареєструватись</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  ${require('./partials/registration.html')}
 
 </body>
 
