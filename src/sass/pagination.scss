@@ -19,13 +19,20 @@ body {
   }
 }
 .section-pagination {
-  //   background-color: #f5f6fb;
-  //   @extend %section-style;
   @extend %container-style;
   padding: 0px 15px;
 }
 .pagination-name-group-div {
-  padding: 25px 0px;
+  // padding: 25px 0px;
+
+  // display: inline-block;
+
+  & :not(:first-child) span {
+    display: none;
+  }
+}
+.pagination-name-group {
+  display: block;
 }
 .pagination-card {
   height: 350px;
@@ -65,8 +72,11 @@ body {
   }
 }
 .pagination-catigories-btn {
-  padding: 20px;
+  padding: 20px 0px;
   text-align: center;
+  & a {
+    padding: 20px;
+  }
 }
 
 .section-footer {

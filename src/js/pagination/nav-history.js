@@ -1,18 +1,18 @@
 const routers = [
     
     {
-        path:'/page1',
+        path: '/page1',    
+        component: fun1,
+        meta: { auth: false}
+    },
+    {
+        path: '/page2',    
         component: fun2,
         meta: { auth: false}
     },
     {
-        path:'/page2',
+        path: '/page3',   
         component: fun3,
-        meta: { auth: false}
-    },
-    {
-        path:'/page3',
-        component: fun4,
         meta: { auth: false}
     }
 ];
@@ -20,14 +20,12 @@ const routers = [
 let auth = true;
 let startState = true;
 
-let navbarNav = document.querySelector('.pagination-btn');
-// let title = document.querySelector('.title');
+let navbarNav = document.querySelector('.navbar-nav');
 
 function updatePage (e) {
     if (e.target.tagName !== "A") return
     e.preventDefault();
-    updateHistory(e);
-    updatedContent();
+    updateHistory(e);    
 }
 
 function updateHistory(e) {
@@ -36,7 +34,6 @@ function updateHistory(e) {
     if (!router) return
     if (!router.meta.auth || !auth) history.pushState(query, null, query)
 }
-
 function updatedContent() {
     let router = routers.find( item => item.path === history.state || item.path === location.pathname)
     if (!router) {
@@ -58,21 +55,20 @@ window.onpopstate = function(event) {
 };
 
 navbarNav.addEventListener('click', updatePage);
+
 window.addEventListener('load', updatedContent());
 
 
+
+function fun1 () {
+
+}
 function fun2 () {
-    // title.innerHTML = 'Первая страница';
-}
 
+}
 function fun3 () {
-    // title.innerHTML = 'Вторая страница';
-}
 
-function fun4 () {
-    // title.innerHTML = 'Третья страница';
 }
-
 function fun5 () {
-    // title.innerHTML = 'Not found';
+   alert('Not found');
 }
