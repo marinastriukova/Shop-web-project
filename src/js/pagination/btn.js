@@ -20,8 +20,9 @@ export default function renLi(token) {
     
     function btn1() {        
         page = 1
-        if(btn[1].classList.contains('activ')){btn[1].classList.remove('activ')} else if( btn[2].classList.contains('activ')){btn[2].classList.remove('activ')}
-        btn[0].classList.add('activ')
+        console.log(btn[1].children[0]);
+        if(btn[1].children[0].classList.contains('active')){btn[1].children[0].classList.remove('active')} else if( btn[2].children[0].classList.contains('active')){btn[2].children[0].classList.remove('active')}
+        btn[0].children[0].classList.add('active')
         fetch(`${URL}${page}`, options).then(r=>r.json()).then(e => {
         renderDi(e);        
     })
@@ -29,16 +30,16 @@ export default function renLi(token) {
     }
     function btn2() {        
         page = 2
-        if(btn[0].classList.contains('activ')){btn[0].classList.remove('activ')} else if( btn[2].classList.contains('activ')){btn[2].classList.remove('activ')}
-        btn[1].classList.add('activ')
+        if(btn[0].children[0].classList.contains('active')){btn[0].children[0].classList.remove('active')} else if( btn[2].children[0].classList.contains('active')){btn[2].children[0].classList.remove('active')}
+        btn[1].children[0].classList.add('active')
         fetch(`${URL}${page}`, options).then(r=>r.json()).then(e => {
         renderDi(e)       
     })
     }
     function btn3() {        
         page = 3
-        if(btn[0].classList.contains('activ')){btn[0].classList.remove('activ')} else if( btn[1].classList.contains('activ')){btn[1].classList.remove('activ')}
-        btn[2].classList.add('activ')
+        if(btn[0].children[0].classList.contains('active')){btn[0].children[0].classList.remove('active')} else if( btn[1].children[0].classList.contains('active')){btn[1].children[0].classList.remove('active')}
+        btn[2].children[0].classList.add('active')
         fetch(`${URL}${page}`, options).then(r=>r.json()).then(e => {
         renderDi(e)       
     })

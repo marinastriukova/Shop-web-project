@@ -60,10 +60,7 @@ body {
   margin: 0px;
   padding-left: 15px;
   cursor: pointer;
-  & .activ {
-    color: $white-color;
-    background-color: $bold-text-color;
-  }
+
   @media screen and (min-width: 768px) {
     padding-left: 22px;
   }
@@ -71,11 +68,15 @@ body {
     padding-left: 20px;
   }
 }
+.active {
+  color: $white-color;
+  background-color: $bold-text-color;
+}
 .pagination-catigories-btn {
   padding: 20px 0px;
   text-align: center;
   & a {
-    padding: 20px;
+    padding: 15px 20px;
   }
 }
 

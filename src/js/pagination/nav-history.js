@@ -1,7 +1,7 @@
 const routers = [
     
     {
-        path: '/page1',    
+        path: '/',    
         component: fun1,
         meta: { auth: false}
     },
