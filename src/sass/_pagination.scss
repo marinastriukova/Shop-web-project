@@ -68,17 +68,24 @@ body {
     padding-left: 20px;
   }
 }
-.active {
-  color: $white-color;
-  background-color: $bold-text-color;
-}
 .pagination-catigories-btn {
-  padding: 20px 0px;
+  padding: 15px 0px;
   text-align: center;
+  background-color: $white-color;
   & a {
+    color: $bold-text-color;
+    text-decoration: none;
     padding: 15px 20px;
   }
+  & .active {
+    color: $white-color;
+    background-color: $bold-text-color;
+  }
 }
+// .active {
+//   color: $white-color;
+//   background-color: $bold-text-color;
+// }
 
 .section-footer {
   @extend %section-style;
