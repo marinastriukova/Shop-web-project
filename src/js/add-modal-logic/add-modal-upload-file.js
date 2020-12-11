@@ -1,7 +1,8 @@
-export default function uploadFile(file) {
-  const addImage = document.querySelector('.add-image');
-  const imageList = document.querySelector('.image-preview');
+import refs from './refs';
 
+const { addImage, imageList } = refs;
+
+export default function uploadFile(file) {
   //проверяем тип файла
   if (!['image/jpeg'].includes(file.type)) {
     alert('Можна добавляти фото тільки формату .jpeg!');

@@ -1,3 +1,6 @@
+body.hidden {
+  overflow: hidden;
+}
 .add-modal__overlay {
   position: fixed;
   width: 100%;
@@ -96,6 +99,12 @@
     margin-right: 80px;
   }
 }
+.add-form__error-message.error-price {
+  display: none;
+}
+.add-form__error-message.error-price.visible {
+  display: block;
+}
 .add-form__error-message {
   transition: $animation-timing;
   opacity: 0;
@@ -139,7 +148,7 @@
   resize: vertical;
 }
 
-.image-preview {
+.image-preview__add {
   @extend %list-throw;
   margin: 0;
   display: grid;
