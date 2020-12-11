@@ -5,7 +5,7 @@ const removePagin = document.querySelector('.pagination-div')
 const newApi = new Api();
 const cardRef = document.querySelector('.card__list');
 const cardExamp = newApi.getQuery();
-
+const renderDiv = document.querySelector('.pagination-div')
 
 removePagin.addEventListener('click', clickCategory) // клик по "Дивитись всі"
 
@@ -21,12 +21,15 @@ function clickCategory(e) {
   
   cardExamp.then(resul => {
     console.log(camelQuery);
+    console.log(resul);
     renderCard(resul)
   }) 
 
 
-  function renderCard(resul) {     
-    const card = cardTpl(resul)
+  function renderCard(resul) { 
+    renderDiv.innerHTML = ''
+    cardRef.innerHTML = ''    
+    const card = cardTpl(resul.property)
   cardRef.insertAdjacentHTML("beforeend", card);
   }
 }
