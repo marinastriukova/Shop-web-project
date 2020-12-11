@@ -92,6 +92,7 @@ body {
   background-color: $main-color;
   transition: $animation-timing;
   &:hover {
+    border: solid 1px $inactive-color;
     color: $bold-text-color;
     background-color: $white-color;
   }
@@ -105,6 +106,7 @@ body {
   color: $bold-text-color;
   background-color: $white-color;
   transition: $animation-timing;
+  border: solid 1px $inactive-color;
   &:hover {
     color: $white-color;
     background-color: $main-color;
