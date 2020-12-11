@@ -24,7 +24,7 @@ body {
 // Сброс ссылки
 %link-throw {
   display: block;
-  list-style: none;
+  text-decoration: none;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -91,8 +91,13 @@ body {
   color: $white-color;
   background-color: $main-color;
   transition: $animation-timing;
+
   &:hover {
-    border: solid 1px $inactive-color;
+    
+
+  &:hover,
+  &:focus {
+
     color: $bold-text-color;
     background-color: $white-color;
   }
@@ -106,8 +111,9 @@ body {
   color: $bold-text-color;
   background-color: $white-color;
   transition: $animation-timing;
-  border: solid 1px $inactive-color;
-  &:hover {
+
+  &:hover,
+  &:focus {
     color: $white-color;
     background-color: $main-color;
   }
@@ -122,7 +128,8 @@ body {
   background-color: $main-color;
   transition: $animation-timing;
   border: 1px solid #bbbbbb;
-  &:hover {
+  &:hover,
+  &:focus {
     color: $bold-text-color;
     background-color: $white-color;
   }
@@ -137,7 +144,8 @@ body {
   background-color: $white-color;
   transition: $animation-timing;
   border: 1px solid #bbbbbb;
-  &:hover {
+  &:hover,
+  &:focus {
     color: $white-color;
     background-color: $main-color;
   }
@@ -153,7 +161,8 @@ body {
   background-color: $main-color;
   transition: $animation-timing;
   border: 1px solid #bbbbbb;
-  &:hover {
+  &:hover,
+  &:focus {
     color: $bold-text-color;
     background-color: $white-color;
   }
@@ -168,7 +177,8 @@ body {
   background-color: $white-color;
   transition: $animation-timing;
   border: 1px solid #bbbbbb;
-  &:hover {
+  &:hover,
+  &:focus {
     color: $white-color;
     background-color: $main-color;
   }
