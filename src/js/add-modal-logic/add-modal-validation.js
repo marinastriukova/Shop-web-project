@@ -1,8 +1,7 @@
 import uploadFile from './add-modal-upload-file';
+import refs from './refs';
 
-const form = document.querySelector('.js-add-form');
-const addImage = document.querySelector('.add-image');
-const imageList = document.querySelector('.image-preview');
+const { form, addImage, imageList } = refs;
 
 form.addEventListener('submit', formSend);
 
@@ -19,6 +18,11 @@ async function formSend(e) {
 function formValidate(form) {
   let error = 0;
   let formReq = form.querySelectorAll('._req');
+  const price = document.querySelector('._price');
+  const errorPriceBlock = document.querySelector('.error-price');
+
+  errorPriceBlock.classList.remove('visible');
+
   for (let i = 0; i < formReq.length; i++) {
     const element = formReq[i];
     element.nextElementSibling.classList.remove('visible');
@@ -44,6 +48,13 @@ function formValidate(form) {
         error += 1;
       }
     } else if (element.classList.contains('_category')) {
+      //сопоставляем цену и категорию
+
+      let value = element.options[element.selectedIndex].value;
+
+      if ((value === 'work' || value === 'for-free') && price.value !== '0') {
+        errorPriceBlock.classList.add('visible');
+      }
       //валидация категории
 
       if (element.value === 'category') {
@@ -51,13 +62,16 @@ function formValidate(form) {
         error += 1;
       }
     } else if (element.classList.contains('_price')) {
-      //валидация категории
+      //валидация цены
 
-      if (element.value.length < 2) {
+      if (
+        (!Number(element.value) && Number(element.value) !== 0) ||
+        element.value === ''
+      ) {
         element.nextElementSibling.classList.add('visible');
         error += 1;
       }
-    } else if (imageList.children.length < 2) {
+    } else if (imageList.children.length < 3 || imageList.children.length > 5) {
       //валидация списка картинок
 
       element.nextElementSibling.classList.add('visible');
