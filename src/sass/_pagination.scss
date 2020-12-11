@@ -27,7 +27,7 @@ body {
 
   // display: inline-block;
 
-  & :not(:first-child) span {
+  & :not(:first-child) {
     display: none;
   }
 }
