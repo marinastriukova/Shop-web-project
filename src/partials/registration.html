@@ -1,43 +1,38 @@
-<!DOCTYPE html>
-<html lang="ru">
+<div class="registration-container">
+    <button  data-modal-open>Регистрация</button>
+    <div class="registration-modal-backdrop is-hidden" data-modal>
+        <div class="registration-modal-form">
+            <button class="registration-close-button" data-modal-close>
+                <svg class="registration-close-icon">
+                    <use href="../images/sprite/symbol-defs.svg#icon-close-24px-1"></use>
+                </svg>
+            </button>
 
-<head></head>
-
-<body>
-    <div class="registration-container">
-        <button class="registration-button" data-modal-open>Регистрация</button>
-        <div class="registration-modal-backdrop is-hidden" data-modal>
-            <div class="registration-modal-form">
-                <button class="registration-close-button" data-modal-close>
-                    <svg class="registration-close-icon">
-                        <use href="../images/sprite/symbol-defs.svg#close-24px"></use>
-                    </svg>
-                </button>
-
-                <p class="registration-text registration-text-title">Ви можете авторизуватися за допомогою Googlt
-                    Account:</p>
-                <button class="registration-button-google">
-                    <svg class="registration-button-google-icon">
-                        <use href="../images/sprite/symbol-defs.svg#icon-google-symbol-1"></use>
-                    </svg>
-                    <span class="registration-button-google-text">Google</span>
-                </button>
-                <p class="registration-text">Або зайти за допомогою імейлу і пароля, попередньо зареєструвавшись:
-                </p>
-                <form class="registration-form">
-                    <div class="registration-input-container">
-                        <input type="email" class="registration-input registration-input-login" placeholder="E-mail"
-                            name="email" id="mail">
-                        <input type="password" class="registration-input" placeholder="Password" name="password"
-                            minlength="8" required>
-                    </div>
-                </form>
-                    <div class="registration-btn-container">
-                        <button class="registration-button-entry">Увійти</button>
-                        <button class="registration-button">Зареєструватись</button>
-                    </div>
+            <p class="registration-text registration-text-title">Ви можете авторизуватися за допомогою Googlt
+                Account:</p>
+            <button class="registration-button-google">
+                <svg class="registration-button-google-icon">
+                    <use href="../images/sprite/symbol-defs.svg#icon-google-symbol-1"></use>
+                </svg>
+                <span class="registration-button-google-text">Google</span>
+            </button>
+            <p class="registration-text">Або зайти за допомогою імейлу і пароля, попередньо зареєструвавшись:
+            </p>
+            <form class="registration-form" method="POST" >
+            <!-- onSubmit="toggleRegisterModal()" -->
                 
-            </div>
+                <div class="registration-input-container">
+                    <input type="email" class="registration-input registration-input-login" placeholder="E-mail"
+                        name="email" id="mail" required>
+                    <input type="password" class="registration-input" placeholder="Password" name="password"
+                        minlength="7" required>
+                </div>
+            
+                <div class="registration-btn-container">
+                    <button type="submit" class="registration-button-entry">Увійти</button>
+                    <button type="submit" class="registration-button">Зареєструватись</button>
+                </div>
+            </form>
         </div>
     </div>
-</body>
+</div>
