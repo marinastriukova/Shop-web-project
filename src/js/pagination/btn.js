@@ -21,7 +21,6 @@ export default function renLi(token) {
     
     function btn1() {        
         page = 1
-        // console.log(btn[1].children[0]);
         cardRef.innerHTML = ''
         if(btn[1].children[0].classList.contains('active')){btn[1].children[0].classList.remove('active')} else if( btn[2].children[0].classList.contains('active')){btn[2].children[0].classList.remove('active')}
         btn[0].children[0].classList.add('active')

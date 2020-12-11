@@ -11,7 +11,8 @@ removePagin.addEventListener('click', clickCategory) // клик по "Диви�
 
 function clickCategory(e) {
   const query = e.target.getAttribute('class');
-  const camelQuery = camelize(query)
+  if (e.target.tagName === "A") {
+    const camelQuery = camelize(query)
   function camelize() {
   return query.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function(match, index) {
     if (+match === 0) return "";
@@ -20,18 +21,20 @@ function clickCategory(e) {
 }
   
   cardExamp.then(resul => {
-    console.log(camelQuery);
-    console.log(resul);
     renderCard(resul)
   }) 
 
 
   function renderCard(resul) { 
     renderDiv.innerHTML = ''
-    cardRef.innerHTML = ''    
-    const card = cardTpl(resul.property)
+    cardRef.innerHTML = '' 
+    console.log(resul)
+    console.log(camelQuery);
+    const card = cardTpl(resul[camelQuery])
   cardRef.insertAdjacentHTML("beforeend", card);
   }
+   
+ }
 }
   
 
