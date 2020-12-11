@@ -5,7 +5,6 @@ const cleanButton = document.querySelector('.header-nav__clear__button')
 const removePagin = document.querySelector('.pagination-div')
 const cardRef = document.querySelector('.card__list');
 const renderDiv = document.querySelector('.pagination-div')
-console.log(btn[0].children[0].innerHTML);
 
 cleanButton.addEventListener('click', cleanRenderCategory)
 function cleanRenderCategory() {
@@ -30,6 +29,7 @@ function cleanRenderCategory() {
 removePagin.addEventListener('click', clickCategory) 
 
 function clickCategory(e) {
+    e.preventDefault();
     let url = `https://callboard-backend.herokuapp.com/call?page=1`
 
      if (btn[0].children[0].classList.contains('active')) {
@@ -56,6 +56,7 @@ function clickCategory(e) {
 
     const query = e.target.getAttribute('class');
     if (e.target.tagName === "A") {
+
         const camelQuery = camelize(query)
         function camelize() {
             return query.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function(match, index) {
