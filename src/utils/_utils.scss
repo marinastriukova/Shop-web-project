@@ -91,13 +91,8 @@ body {
   color: $white-color;
   background-color: $main-color;
   transition: $animation-timing;
-
-  &:hover {
-    
-
   &:hover,
   &:focus {
-
     color: $bold-text-color;
     background-color: $white-color;
   }
