@@ -62,15 +62,18 @@ let startState = true;
 let navbarNav = document.querySelector('.navbar-nav');
 const renderDiv = document.querySelector('.pagination-div')
 const cleanButton = document.querySelector('.header-nav__clear__button')
+const is_hiden = document.querySelector('.card')
 
 function updatePage (e) {
-    if (e.target.tagName !== "A" ) return
+    if (e.target.tagName !== "A") return
+    is_hiden.classList.remove('is_hiden')
     e.preventDefault();
     updateHistory(e);    
     
 }
 function updateButton (e) {
-    if (e.target.tagName !== "BUTTON" ) return
+    if (e.target.tagName !== "BUTTON") return
+    is_hiden.classList.add('is_hiden')
     e.preventDefault();
     updateHist(e);    
     

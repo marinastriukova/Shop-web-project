@@ -23,16 +23,32 @@ body {
   padding: 0px 15px;
 }
 .pagination-name-group-div {
-  // padding: 25px 0px;
-
-  // display: inline-block;
-
   & :not(:first-child) {
     display: none;
   }
 }
 .pagination-name-group {
   display: block;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  & a {
+    padding-left: 15px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.06em;
+    text-decoration-line: underline;
+
+    color: $main-color;
+  }
 }
 .pagination-card {
   height: 350px;
@@ -153,8 +169,22 @@ body {
   }
   padding: 20px 0px;
 }
+.pagination-price {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+}
 .pagination-name-card {
   margin-bottom: 5px !important;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.07em;
 }
 .render_card {
   display: none;
