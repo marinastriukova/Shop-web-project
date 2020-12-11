@@ -1,5 +1,6 @@
 // import '../card/api'
 import renderDi from './render' 
+const renderDiv = document.querySelector('.pagination-div')
 const btn = document.getElementsByClassName('pagination-catigories-btn')
 const cardRef = document.querySelector('.card__list');
 
@@ -23,6 +24,7 @@ export default function renLi(token) {
     function btn1() {     
         page = 1
         cardRef.innerHTML = ''
+        renderDiv.classList.remove('render_card')
         if(btn[1].children[0].classList.contains('active')){btn[1].children[0].classList.remove('active')} else if( btn[2].children[0].classList.contains('active')){btn[2].children[0].classList.remove('active')}
         btn[0].children[0].classList.add('active')
         fetch(`${URL}${page}`, options).then(r=>r.json()).then(e => {
@@ -34,6 +36,7 @@ export default function renLi(token) {
     function btn2() {  
         page = 2
         cardRef.innerHTML = ''
+        renderDiv.classList.remove('render_card')
         if(btn[0].children[0].classList.contains('active')){btn[0].children[0].classList.remove('active')} else if( btn[2].children[0].classList.contains('active')){btn[2].children[0].classList.remove('active')}
         btn[1].children[0].classList.add('active')
         fetch(`${URL}${page}`, options).then(r=>r.json()).then(e => {
@@ -44,6 +47,7 @@ export default function renLi(token) {
     function btn3() {     
         page = 3
         cardRef.innerHTML = ''
+        renderDiv.classList.remove('render_card')
         if(btn[0].children[0].classList.contains('active')){btn[0].children[0].classList.remove('active')} else if( btn[1].children[0].classList.contains('active')){btn[1].children[0].classList.remove('active')}
         btn[2].children[0].classList.add('active')
         fetch(`${URL}${page}`, options).then(r=>r.json()).then(e => {
