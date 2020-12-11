@@ -1,4 +1,4 @@
-<div class="add-modal__overlay visible">
+<div class="add-modal__overlay">
   <div class="add-modal">
     <div class="add-modal__content">
       <button type="button" class="add-modal__close-btn" data-close="true">
@@ -28,7 +28,7 @@
           <div class="add-form__item">
             <label class="add-form__label">Фото</label>
             <div class="input-wrapper">
-              <ul class="image-preview _req">
+              <ul class="image-preview__add _req">
                 <li class="image-preview__item">
                   <div class="choose-image">
                     <input
@@ -41,7 +41,7 @@
                 </li>
               </ul>
               <div class="add-form__error-message">
-                Додайте хоча б одне фото товару
+                Потрібно добавити від 2-х до 5-ти фото
               </div>
             </div>
           </div>
@@ -75,26 +75,6 @@
                 >
                   Категорія
                 </option>
-                <option value="property" class="select-option">
-                  Нерухомість
-                </option>
-                <option value="transport" class="select-option">
-                  Транспорт
-                </option>
-                <option value="work" class="select-option">Робота</option>
-                <option value="electronics" class="select-option">
-                  Електроніка
-                </option>
-                <option value="business-and-services" class="select-option">
-                  Бізнес та послуги
-                </option>
-                <option value="recreation-and-sports" class="select-option">
-                  Відпочинок та спорт
-                </option>
-                <option value="for-free" class="select-option">
-                  Віддам безкоштовно
-                </option>
-                <option value="exchange" class="select-option">Обмін</option>
               </select>
               <div class="add-form__error-message">Виберіть категорію</div>
             </div>
@@ -116,6 +96,9 @@
               />
               <div class="add-form__error-message">
                 Введіть коректну ціну товару
+              </div>
+              <div class="add-form__error-message error-price">
+                Ціна для цїєї категорії має бути 0
               </div>
             </div>
           </div>
