@@ -1,17 +1,17 @@
 const routers = [
     
     {
-        path: '/',    
+        path: '/Shop-web-project/',    
         component: fun1,
         meta: { auth: false}
     },
     {
-        path: '/page2',    
+        path: '/Shop-web-project/page2',    
         component: fun2,
         meta: { auth: false}
     },
     {
-        path: '/page3',   
+        path: '/Shop-web-project/page3',   
         component: fun3,
         meta: { auth: false}
     }
