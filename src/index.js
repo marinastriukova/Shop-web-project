@@ -1,3 +1,7 @@
+
+ import "./sass/main.scss";
+ import "./images/sprite/symbol-defs.svg";
+ import "./js/search-form/search-form.js";
 import './sass/main.scss';
 import './images/sprite/symbol-defs.svg';
 import './js/header.js/menu';
@@ -7,4 +11,5 @@ import './js/add-modal-logic/add-modal-validation';
 import './js/header.js/routers';
 import './js/add-modal-logic/add-modal-open';
 import './js/add-modal-logic/add-modal-close';
+
 
