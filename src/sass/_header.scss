@@ -152,12 +152,28 @@
     @media screen and (min-width: 768px) {
       margin-right: 20px;
     }
+    @media screen and (min-width: 1280px) {
+      display: none;
+    }
   }
   &__button {
     @extend %button-tablet-orange;
   }
 }
-
+.registry-button {
+  @extend %button-desktop-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & span {
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+    @media screen and (max-width: 1280px) {
+      margin-right: 20px;
+    }
+  }
+}
 .header-menu__search {
   fill: #000000;
 }
