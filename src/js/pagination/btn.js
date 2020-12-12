@@ -4,12 +4,6 @@ const renderDiv = document.querySelector('.pagination-div')
 const btn = document.getElementsByClassName('pagination-catigories-btn')
 const cardRef = document.querySelector('.card__list');
 const is_hiden = document.querySelector('.card')
-const refresh = document.querySelector('.header-nav__clear__button')
-
-refresh.addEventListener('click', (e) => {
-    e.preventDefault;
-    is_hiden.classList.add('is_hiden')
-})
 
 
 export default function renLi(token) {
