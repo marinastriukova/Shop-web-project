@@ -8,5 +8,5 @@
  import './js/add-modal-logic/add-modal-close';
 import './js/card/api'
 import './js/pagination/pagination';
-
+// import './js/category/slider';
 

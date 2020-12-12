@@ -1,25 +1,56 @@
 {{#each this}}
-<div class="pagination-group">
-    <div class="pagination-name-group-div">
-        {{#each this}}
-        <span class="pagination-name-group">{{category}}
-            <a class="{{category}} " href="/{{category}}">Дивитися всі</a></span>{{/each}}
-    </div>
-    <ul class="pagination-card-all">
-        {{#each this}}
-        <li class="pagination-card-block">
-            <div class="pagination-card">
-                <img class="img1" loading="lazy" src="
-                {{imageUrls}}
-                " data-src="#" alt=" image" />
-            </div>
-            <div class="namePrice">
-                <p class="pagination-name-card">{{description}}</p>
-                <p class="pagination-price">{{price}} грн</p>
-            </div>
-        </li>
+<div class="category-border-up"></div>
+<div class="container js-category">
+    <section class="category-item ">
+        <div class="category-description">
+            <button type="button" class="category-btn btn-prev swiper-button-prev">
+                &lt;
+            </button>
 
-        {{/each}}
-    </ul>
+            <!-- Здесь нужно рендерить название категории  -->
+            {{#each this}}
+            <span class="category-description__name">{{category}}</span>
+
+            <a href="/{{category}}" class="category-description__view-all">Дивитися
+                всі</a>
+            {{/each}}
+            <button type="button" class="category-btn btn-next swiper-button-next">
+                &gt;
+            </button>
+        </div>
+        <div class="slider-container swiper-container">
+            <ul class="category-cards slider-track swiper-wrapper">
+                {{#each this}}
+
+                <!-- Сюда нужно добавлять карточки категории -->
+
+                <li class="card__item category-cards__item slider-item swiper-slide" data-action={{category}}
+                    data-action={{description}} data-action={{phone}} data-action={{userId}}>
+                    <a class="card__link" href="">
+                        <div class="card__img-wraper">
+                            {{#each imageUrls}}<img class="card__img" src="{{this}}" alt="image">{{/each}}
+                            <svg class="card__svg">
+                                <use href="../images/sprite/symbol-defs.svg#icon-heart"></use>
+                            </svg>
+                            <svg class="card__svg2">
+                                <use href="../images/sprite/symbol-defs.svg#icon-fullscreen-24px-1"></use>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <div class="card__text">
+                        <h3 class="card__title">{{title}}</h3>
+                        <div class="double-price">
+                            <p class="card__price">{{price}} грн</p>
+                            <p class="card__sale">{{isOnSale}}</p>
+                        </div>
+                    </div>
+
+                </li>
+                <!--  -->
+                {{/each}}
+            </ul>
+        </div>
+    </section>
 </div>
 {{/each}}
