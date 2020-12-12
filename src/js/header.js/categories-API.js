@@ -1,89 +1,80 @@
-let title = document.querySelector('.title');
+const { error, success, alert } = require('@pnotify/core');
+import "@pnotify/core/dist/PNotify.css";
+import "@pnotify/core/dist/BrightTheme.css";
+
 
 export default class CategoriesApi {
   constructor() {
    
   }
   onHome () {
-    // title.innerHTML = 'Home';
-}
-
-onSales () {
-    // title.innerHTML = 'sales';
-   return fetch("https://callboard-backend.herokuapp.com/call/specific/sales")
+    return fetch("https://callboard-backend.herokuapp.com/call?page=1")
   .then(response => response.json())
   .then(result => result)
   .catch(error => console.log('error', error));
 }
 
-onRecreationAndSport () {
-    // title.innerHTML = 'recreationAndSport';
+onSales () {   
+  return fetch("https://callboard-backend.herokuapp.com/call/specific/sales")
+  .then(response => response.json())
+  .then(result => result)
+  .catch(error => console.log('error', error));
+}
+
+onRecreationAndSport () {  
    return fetch("https://callboard-backend.herokuapp.com/call/specific/recreationAndSport")
   .then(response => response.json())
   .then(result => result)
   .catch(error => console.log('error', error));
 }
 
-onFree () {
-    // title.innerHTML = 'free';
-   return fetch("https://callboard-backend.herokuapp.com/call/specific/free")
+onFree () {    
+    return fetch("https://callboard-backend.herokuapp.com/call/specific/free")
   .then(response => response.json())
   .then(result => result)
   .catch(error => console.log('error', error));
 }
 
-onbusinessAndServices () {
-    // title.innerHTML = 'businessAndServices';
+onbusinessAndServices () {   
    return fetch("https://callboard-backend.herokuapp.com/call/specific/businessAndServices")
   .then(response => response.json())
   .then(result => result)
   .catch(error => console.log('error', error));
 }
-onWork () {
-    // title.innerHTML = 'work';
-  return  fetch("https://callboard-backend.herokuapp.com/call/specific/work")
+onWork () {   
+   return fetch("https://callboard-backend.herokuapp.com/call/specific/work")
   .then(response => response.json())
   .then(result => result)
   .catch(error => console.log('error', error));
 }
-onTransport () {
-    // title.innerHTML = 'transport';
+onTransport () {   
    return fetch("https://callboard-backend.herokuapp.com/call/specific/transport")
   .then(response => response.json())
   .then(result => result)
   .catch(error => console.log('error', error));
 }
-onElectronics () {
-    // title.innerHTML = 'electronics';
-  return  fetch("https://callboard-backend.herokuapp.com/call/specific/electronics")
+onElectronics () {    
+   return fetch("https://callboard-backend.herokuapp.com/call/specific/electronics")
   .then(response => response.json())
   .then(result => result)
   .catch(error => console.log('error', error));
 }
-onTrade () {
-    // title.innerHTML = 'trade';
+onTrade () {   
    return fetch("https://callboard-backend.herokuapp.com/call/specific/trade")
   .then(response => response.json())
   .then(result => result)
   .catch(error => console.log('error', error));
 }
-onProperty () {
-    // title.innerHTML = 'property';
+onProperty () {    
    return fetch("https://callboard-backend.herokuapp.com/call/specific/property")
   .then(response => response.json())
   .then(result => result)
   .catch(error => console.log('error', error));
 }
 onError () {
-    // title.innerHTML = 'Not found';
+  error({
+    title: 'Неправильный адрес страницы!!!',
+    delay: 1500
+  })
 }
 }
-
-
-
-
-
-
-
-
-   

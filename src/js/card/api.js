@@ -1,7 +1,7 @@
 
 import cardTpl from '../../templates/card.hbs';
 const btn = document.getElementsByClassName('pagination-catigories-btn')
-const cleanButton = document.querySelector('.header-nav__clear__button')
+const cleanButton = document.querySelector('.header-menu__clear__button')
 const removePagin = document.querySelector('.pagination-div')
 const cardRef = document.querySelector('.card__list');
 const renderDiv = document.querySelector('.pagination-div')
@@ -46,11 +46,12 @@ function clickFilter(e) {
 }
 
 cleanButton.addEventListener('click', cleanRenderCategory)
-function cleanRenderCategory() {
-   
+function cleanRenderCategory(e) {
+   e.preventDefault()
     
      if (btn[0].children[0].classList.contains('active')) {
          renderDiv.classList.remove('render_card')
+         is_hiden.classList.add('is_hiden')
          cardRef.innerHTML = '' 
          
          
@@ -59,11 +60,13 @@ function cleanRenderCategory() {
     }
     if (btn[1].children[0].classList.contains('active')) {
         renderDiv.classList.remove('render_card')
+        is_hiden.classList.add('is_hiden')
         cardRef.innerHTML = '' 
         
     }
     if (btn[2].children[0].classList.contains('active')) {
         renderDiv.classList.remove('render_card')
+        is_hiden.classList.add('is_hiden')
         cardRef.innerHTML = '' 
        
     }

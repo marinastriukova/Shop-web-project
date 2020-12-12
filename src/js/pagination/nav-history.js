@@ -61,7 +61,7 @@ let startState = true;
 
 let navbarNav = document.querySelector('.navbar-nav');
 const renderDiv = document.querySelector('.pagination-div')
-const cleanButton = document.querySelector('.header-nav__clear__button')
+const cleanButton = document.querySelector('.header-menu__clear__button')
 const is_hiden = document.querySelector('.card')
 
 function updatePage (e) {

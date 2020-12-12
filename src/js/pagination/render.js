@@ -6,3 +6,5 @@ export default function renderDi(resul) {
     const markup = hendelDiv(resul);    
     renderDiv.insertAdjacentHTML('afterbegin', markup);
 }
+
+
