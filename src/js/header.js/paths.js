@@ -1,5 +1,5 @@
-import categoriesAPI from './categories-API'
-const API = new categoriesAPI();
+import CategoriesAPI from './categories-API'
+const API = new CategoriesAPI();
 export default [
     {
         path:'/',
@@ -49,6 +49,11 @@ export default [
     {
         path:'/property',
         component: API.onProperty,
+        meta: { auth: false}
+    },
+    {
+        path:'/mycabinet',
+        component: API.inCabinet,
         meta: { auth: false}
     }
 ];

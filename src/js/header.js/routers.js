@@ -1,6 +1,6 @@
 import links from './links'
-import categoriesAPI from './categories-API'
-const catApi = new categoriesAPI();
+import CategoriesAPI from './categories-API'
+const catApi = new CategoriesAPI();
 import routers from './paths' 
 let auth = true;
 let startState = true;

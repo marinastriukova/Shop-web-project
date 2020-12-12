@@ -165,12 +165,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 26px;
   & span {
     @media screen and (max-width: 1279px) {
       display: none;
-    }
-    @media screen and (max-width: 1280px) {
-      margin-right: 20px;
     }
   }
 }
