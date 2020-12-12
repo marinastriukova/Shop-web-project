@@ -1,9 +1,8 @@
 import './nav-history'
-import loginning from './loginning'
+import loginning from './btn'
 import './lazy'
 
 
 loginning()
-setInterval(loginning, 3480000)
 
 

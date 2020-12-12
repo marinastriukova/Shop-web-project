@@ -1,4 +1,4 @@
-// import '../card/api'
+
 import renderDi from './render' 
 const renderDiv = document.querySelector('.pagination-div')
 const btn = document.getElementsByClassName('pagination-catigories-btn')
@@ -14,13 +14,8 @@ export default function renLi(token) {
     btn[2].addEventListener('click', btn3)
     const URL = "https://callboard-backend.herokuapp.com/call?page="
             
-    const options = {
-        headers: {
-            Authorization: `${token}`
-        }
-    }
     
-   const fetchRender = fetch(`${URL}${page}`, options).then(r=>r.json()).then(e => {renderDi(e)       
+   const fetchRender = fetch(`${URL}${page}`).then(r=>r.json()).then(e => {renderDi(e)       
     })
    
     function btn1() {     
@@ -29,7 +24,7 @@ export default function renLi(token) {
         renderDiv.classList.remove('render_card')
         if(btn[1].children[0].classList.contains('active')){btn[1].children[0].classList.remove('active')} else if( btn[2].children[0].classList.contains('active')){btn[2].children[0].classList.remove('active')}
         btn[0].children[0].classList.add('active')
-        fetch(`${URL}${page}`, options).then(r=>r.json()).then(e => {
+        fetch(`${URL}${page}`).then(r=>r.json()).then(e => {
             renderDi(e);        
         })
         console.log(is_hiden);
@@ -43,7 +38,7 @@ export default function renLi(token) {
         renderDiv.classList.remove('render_card')
         if(btn[0].children[0].classList.contains('active')){btn[0].children[0].classList.remove('active')} else if( btn[2].children[0].classList.contains('active')){btn[2].children[0].classList.remove('active')}
         btn[1].children[0].classList.add('active')
-        fetch(`${URL}${page}`, options).then(r=>r.json()).then(e => {
+        fetch(`${URL}${page}`).then(r=>r.json()).then(e => {
             renderDi(e)       
         })
         
@@ -55,7 +50,7 @@ export default function renLi(token) {
         renderDiv.classList.remove('render_card')
         if(btn[0].children[0].classList.contains('active')){btn[0].children[0].classList.remove('active')} else if( btn[1].children[0].classList.contains('active')){btn[1].children[0].classList.remove('active')}
         btn[2].children[0].classList.add('active')
-        fetch(`${URL}${page}`, options).then(r=>r.json()).then(e => {
+        fetch(`${URL}${page}`).then(r=>r.json()).then(e => {
             renderDi(e)       
         })
          
