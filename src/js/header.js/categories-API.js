@@ -1,81 +1,81 @@
-let title = document.querySelector('.title');
+const { error, success, alert } = require('@pnotify/core');
+import "@pnotify/core/dist/PNotify.css";
+import "@pnotify/core/dist/BrightTheme.css";
+
 
 export default class CategoriesApi {
   constructor() {
    
   }
   onHome () {
-    title.innerHTML = 'Home';
-}
-
-onSales () {
-    title.innerHTML = 'sales';
-    fetch("https://callboard-backend.herokuapp.com/call/specific/sales")
+    return fetch("https://callboard-backend.herokuapp.com/call?page=1")
   .then(response => response.json())
-  .then(result => console.log(result))
+  .then(result => result)
   .catch(error => console.log('error', error));
 }
 
-onRecreationAndSport () {
-    title.innerHTML = 'recreationAndSport';
-    fetch("https://callboard-backend.herokuapp.com/call/specific/recreationAndSport")
+onSales () {   
+  return fetch("https://callboard-backend.herokuapp.com/call/specific/sales")
   .then(response => response.json())
-  .then(result => console.log(result))
+  .then(result => result)
   .catch(error => console.log('error', error));
 }
 
-onFree () {
-    title.innerHTML = 'free';
-    fetch("https://callboard-backend.herokuapp.com/call/specific/free")
+onRecreationAndSport () {  
+   return fetch("https://callboard-backend.herokuapp.com/call/specific/recreationAndSport")
   .then(response => response.json())
-  .then(result => console.log(result))
+  .then(result => result)
   .catch(error => console.log('error', error));
 }
 
-onbusinessAndServices () {
-    title.innerHTML = 'businessAndServices';
-    fetch("https://callboard-backend.herokuapp.com/call/specific/businessAndServices")
+onFree () {    
+    return fetch("https://callboard-backend.herokuapp.com/call/specific/free")
   .then(response => response.json())
-  .then(result => console.log(result))
+  .then(result => result)
   .catch(error => console.log('error', error));
 }
-onWork () {
-    title.innerHTML = 'work';
-    fetch("https://callboard-backend.herokuapp.com/call/specific/work")
+
+onbusinessAndServices () {   
+   return fetch("https://callboard-backend.herokuapp.com/call/specific/businessAndServices")
   .then(response => response.json())
-  .then(result => console.log(result))
+  .then(result => result)
   .catch(error => console.log('error', error));
 }
-onTransport () {
-    title.innerHTML = 'transport';
-    fetch("https://callboard-backend.herokuapp.com/call/specific/transport")
+onWork () {   
+   return fetch("https://callboard-backend.herokuapp.com/call/specific/work")
   .then(response => response.json())
-  .then(result => console.log(result))
+  .then(result => result)
   .catch(error => console.log('error', error));
 }
-onElectronics () {
-    title.innerHTML = 'electronics';
-    fetch("https://callboard-backend.herokuapp.com/call/specific/electronics")
+onTransport () {   
+   return fetch("https://callboard-backend.herokuapp.com/call/specific/transport")
   .then(response => response.json())
-  .then(result => console.log(result))
+  .then(result => result)
   .catch(error => console.log('error', error));
 }
-onTrade () {
-    title.innerHTML = 'trade';
-    fetch("https://callboard-backend.herokuapp.com/call/specific/trade")
+onElectronics () {    
+   return fetch("https://callboard-backend.herokuapp.com/call/specific/electronics")
   .then(response => response.json())
-  .then(result => console.log(result))
+  .then(result => result)
   .catch(error => console.log('error', error));
 }
-onProperty () {
-    title.innerHTML = 'property';
-    fetch("https://callboard-backend.herokuapp.com/call/specific/property")
+onTrade () {   
+   return fetch("https://callboard-backend.herokuapp.com/call/specific/trade")
   .then(response => response.json())
-  .then(result => console.log(result))
+  .then(result => result)
+  .catch(error => console.log('error', error));
+}
+onProperty () {    
+   return fetch("https://callboard-backend.herokuapp.com/call/specific/property")
+  .then(response => response.json())
+  .then(result => result)
   .catch(error => console.log('error', error));
 }
 onError () {
-    title.innerHTML = 'Not found';
+  error({
+    title: 'Неправильный адрес страницы!!!',
+    delay: 1500
+  })
 }
 }
 
