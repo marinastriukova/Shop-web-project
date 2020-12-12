@@ -1,5 +1,7 @@
-
 .pagination-card-all {
+  & :nth-child(n + 5) {
+    display: none;
+  }
   @extend %list-throw;
   @media screen and (min-width: 768px) {
     display: flex;
@@ -9,6 +11,7 @@
     }
   }
 }
+
 .section-pagination {
   @extend %container-style;
   padding: 0px 15px;
@@ -44,7 +47,7 @@
 .pagination-card {
   height: 350px;
   min-width: 290px;
-  background-color:lavender;
+  background-color: lavender;
   @media screen and (min-width: 768px) {
     min-width: 352px;
   }
