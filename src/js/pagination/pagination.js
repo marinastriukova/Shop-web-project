@@ -1,7 +1,6 @@
 import './nav-history'
 import loginning from './loginning'
 import './lazy'
-// import '../card/index'
 
 
 loginning()

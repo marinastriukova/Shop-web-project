@@ -6,6 +6,7 @@ const removePagin = document.querySelector('.pagination-div')
 const cardRef = document.querySelector('.card__list');
 const renderDiv = document.querySelector('.pagination-div')
 
+
 cleanButton.addEventListener('click', cleanRenderCategory)
 function cleanRenderCategory() {
    
@@ -13,15 +14,20 @@ function cleanRenderCategory() {
      if (btn[0].children[0].classList.contains('active')) {
          renderDiv.classList.remove('render_card')
          cardRef.innerHTML = '' 
+         
+         
+
         
     }
     if (btn[1].children[0].classList.contains('active')) {
         renderDiv.classList.remove('render_card')
         cardRef.innerHTML = '' 
+        
     }
     if (btn[2].children[0].classList.contains('active')) {
         renderDiv.classList.remove('render_card')
         cardRef.innerHTML = '' 
+       
     }
 }
 
