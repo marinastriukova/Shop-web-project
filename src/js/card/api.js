@@ -74,6 +74,9 @@ function clickCategory(e) {
         cardExamp.then(resul => {
             renderCard(resul)
         }) 
+        
+        
+       
 
 
         function renderCard(resul) { 
@@ -85,4 +88,4 @@ function clickCategory(e) {
 
     }
 }
-  
+ 
