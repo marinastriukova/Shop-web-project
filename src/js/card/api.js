@@ -5,6 +5,7 @@ const cleanButton = document.querySelector('.header-nav__clear__button')
 const removePagin = document.querySelector('.pagination-div')
 const cardRef = document.querySelector('.card__list');
 const renderDiv = document.querySelector('.pagination-div')
+const is_hiden = document.querySelector('.card')
 
 
 cleanButton.addEventListener('click', cleanRenderCategory)
@@ -89,3 +90,10 @@ function clickCategory(e) {
     }
 }
  
+export default function render(result) {
+    renderDiv.classList.add('render_card')
+      cardRef.innerHTML = ''   
+      is_hiden.classList.remove('is_hiden')         
+      const card = cardTpl(result)
+  cardRef.insertAdjacentHTML("beforeend", card);
+  }
