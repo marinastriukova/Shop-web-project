@@ -6,7 +6,44 @@ const removePagin = document.querySelector('.pagination-div')
 const cardRef = document.querySelector('.card__list');
 const renderDiv = document.querySelector('.pagination-div')
 const is_hiden = document.querySelector('.card')
+import CategoriesApi from '../header.js/categories-API'
+const catApi = new CategoriesApi();
+const cat = document.querySelector('.js-header-list')
 
+
+cat.addEventListener('click', clickFilter)
+function clickFilter(e) {
+    e.preventDefault 
+    if (e.target.tagName !== "A") return
+    
+    if(e.target.getAttribute('href') === '/property'){
+     catApi.onProperty().then(result =>render(result))};
+
+    if(e.target.getAttribute('href') === '/electronics'){
+    catApi.onElectronics().then(result =>render(result))};
+
+    if(e.target.getAttribute('href') === '/free'){
+    catApi.onFree().then(result =>render(result))};
+
+    if(e.target.getAttribute('href') === '/recreationAndSport'){
+    catApi.onRecreationAndSport().then(result =>render(result))};
+
+    if(e.target.getAttribute('href') === '/sales'){
+    catApi.onSales().then(result =>render(result))};
+
+    if(e.target.getAttribute('href') === '/trade'){
+    catApi.onTrade().then(result =>render(result))};
+
+    if(e.target.getAttribute('href') === '/transport'){
+    catApi.onTransport().then(result =>render(result))};
+                            
+    if(e.target.getAttribute('href') === '/work'){
+    catApi.onWork().then(result =>render(result))};
+
+    if(e.target.getAttribute('href') === '/businessAndServices'){
+    catApi.onbusinessAndServices().then(result =>render(result))};
+                                    
+}
 
 cleanButton.addEventListener('click', cleanRenderCategory)
 function cleanRenderCategory() {
@@ -73,24 +110,16 @@ function clickCategory(e) {
         }
 
         cardExamp.then(resul => {
-            renderCard(resul)
+            render(resul[camelQuery])
         }) 
         
-        
-       
-
-
-        function renderCard(resul) { 
-            renderDiv.classList.add('render_card')
-            cardRef.innerHTML = ''            
-            const card = cardTpl(resul[camelQuery])
-        cardRef.insertAdjacentHTML("beforeend", card);
-        }
 
     }
 }
  
-export default function render(result) {
+
+
+ function render(result) {
     renderDiv.classList.add('render_card')
       cardRef.innerHTML = ''   
       is_hiden.classList.remove('is_hiden')         
