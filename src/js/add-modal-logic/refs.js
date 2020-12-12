@@ -7,4 +7,5 @@ export default {
   body: document.querySelector('body'),
   addModalOverlay: document.querySelector('.add-modal__overlay'),
   closeModalBtn: document.querySelector('.add-modal__close-btn'),
+  selectorCategory: document.querySelector('.add-form__select'),
 };
