@@ -1,7 +1,8 @@
 
 import cardTpl from '../../templates/card.hbs';
 const btn = document.getElementsByClassName('pagination-catigories-btn')
-const cleanButton = document.querySelector('.header-menu__clear__button')
+const cleanButton = document.querySelector('.header-nav__clear__button ')
+const cleanButton2 = document.querySelector('.header-menu__clear__button')
 const removePagin = document.querySelector('.pagination-div')
 const cardRef = document.querySelector('.card__list');
 const renderDiv = document.querySelector('.pagination-div')
@@ -44,6 +45,9 @@ function clickFilter(e) {
     catApi.onbusinessAndServices().then(result =>render(result))};
                                     
 }
+
+cleanButton2.addEventListener('click', cleanRenderCategory)
+
 
 cleanButton.addEventListener('click', cleanRenderCategory)
 function cleanRenderCategory(e) {

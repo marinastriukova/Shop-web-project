@@ -61,7 +61,8 @@ let startState = true;
 
 let navbarNav = document.querySelector('.navbar-nav');
 const renderDiv = document.querySelector('.pagination-div')
-const cleanButton = document.querySelector('.header-menu__clear__button')
+const cleanButton = document.querySelector('.header-nav__clear__button')
+const cleanButton2 = document.querySelector('.header-menu__clear__button')
 const is_hiden = document.querySelector('.card')
 
 function updatePage (e) {
@@ -74,9 +75,16 @@ function updatePage (e) {
     
 }
 function updateButton (e) {
-    if (e.target.tagName !== "BUTTON") return
-    is_hiden.classList.add('is_hiden')
+    if (e.target.tagName !== "A") return
     e.preventDefault();
+    is_hiden.classList.add('is_hiden')
+    updateHist(e);    
+    
+}
+function updateButton2 (e) {
+    if (e.target.tagName !== "BUTTON") return
+    e.preventDefault();
+    is_hiden.classList.add('is_hiden')
     updateHist(e);    
     
 }
@@ -97,3 +105,4 @@ function updateHistory(e) {
 navbarNav.addEventListener('click', updatePage);
 renderDiv.addEventListener('click', updatePage)
 cleanButton.addEventListener('click', updateButton)
+cleanButton2.addEventListener('click', updateButton2)
