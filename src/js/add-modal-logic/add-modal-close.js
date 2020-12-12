@@ -42,3 +42,5 @@ function replaceImagePreview() {
     </li>`,
   );
 }
+
+export { handleCloseModal };
