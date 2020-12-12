@@ -107,8 +107,8 @@ function clickCategory(e) {
 
     const query = e.target.getAttribute('class');
     if (e.target.tagName === "A") {
-
         const camelQuery = camelize(query)
+        console.log(camelQuery);
         function camelize() {
             return query.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function(match, index) {
                 if (+match === 0) return "";
@@ -116,7 +116,7 @@ function clickCategory(e) {
             });
         }
 
-        cardExamp.then(resul => {
+        cardExamp.then(resul => {console.log(resul[camelQuery]);
             render(resul[camelQuery])
         }) 
         
@@ -127,9 +127,10 @@ function clickCategory(e) {
 
 
  function render(result) {
+    //  console.log(result);       
     renderDiv.classList.add('render_card')
       cardRef.innerHTML = ''   
-      is_hiden.classList.remove('is_hiden')         
+      is_hiden.classList.remove('is_hiden')  
       const card = cardTpl(result)
   cardRef.insertAdjacentHTML("beforeend", card);
   }

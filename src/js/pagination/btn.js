@@ -27,7 +27,7 @@ export default function renLi(token) {
         fetch(`${URL}${page}`).then(r=>r.json()).then(e => {
             renderDi(e);        
         })
-        console.log(is_hiden);
+        
        
         
     }
