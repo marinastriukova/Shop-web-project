@@ -94,7 +94,7 @@
 }
 
 .registration-button-google{
-    padding: 17px 33px;
+
     margin-bottom: 41px;
     @extend %button-throw;
     background-color: white;
@@ -111,6 +111,13 @@
         font-weight: 700;
         font-size: 14px;
     }
+}
+
+.google-reg{
+    @extend %link-throw;
+    padding: 17px 33px;
+    text-decoration: none;
+    color: black;
 }
 
 .registration-input-container{
@@ -135,9 +142,9 @@
     color: #bbbbbb;
 }
 
-.registration-input-login{
-    margin-bottom: 20px;   
-}
+// .registration-input-login{
+//     margin-bottom: 20px;   
+// }
 
 .registration-text{
     margin-bottom: 35px;
@@ -155,3 +162,47 @@
     display: flex;
 
 }
+
+
+.registration-input-login:invalid:not(:focus):not(:placeholder-shown) {
+    background: rgb(250, 182, 194);
+  }
+  
+.registration-input-login:invalid:focus:not(:placeholder-shown) {
+    & ~ .requirements-email {
+      opacity: 1;
+    }
+  }
+
+
+.requirements-email {
+  color: #999;
+  opacity: 0;
+  overflow: hidden;
+  color: red;
+  font-size: 12px;
+  padding: 3px 0 7px 25px;
+
+}
+
+.registration-input-password:invalid:not(:focus):not(:placeholder-shown) {
+    background: rgb(250, 182, 194);
+  }
+  
+.registration-input-password:invalid:focus:not(:placeholder-shown) {
+    & ~ .requirements-password {
+      opacity: 1;
+    }
+  }
+
+
+.requirements-password {
+  color: #999;
+  opacity: 0;
+  overflow: hidden;
+  color: red;
+  font-size: 12px;
+  padding: 3px 0 7px 25px;
+
+}
+
