@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,11 +12,14 @@
     integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
     crossorigin="anonymous" />
 </head>
-
-<body>
-  
-  ${require('./partials/registration.html')}
-
-</body>
-
+  <body>  
+    ${require('./partials/header.html')}       
+    ${require('./partials/cards.html')}
+    ${require('./partials/pagination.html')}
+    ${require('./partials/registration.html')}
+    ${require('./partials/search-form.html')} 
+    ${require('./partials/add-modal.html')}
+    ${require('./partials/edit-modal.html')}
+  </body>
 </html>
+

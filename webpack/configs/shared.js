@@ -58,14 +58,14 @@ module.exports = env => ({
         ],
       },
       {
-        test: /\.html$/,
+        test: /\.html$/,        
         use: {
           loader: 'html-loader',
           options: {
             interpolate: true
           }
         },
-      },
+      },     
       {
         test: /\.hbs$/,
         use: 'handlebars-loader',
