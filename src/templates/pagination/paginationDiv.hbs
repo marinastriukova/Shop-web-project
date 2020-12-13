@@ -9,12 +9,12 @@
 
             <!-- Здесь нужно рендерить название категории  -->
             <div class="span_card">
-            {{#each this}}
-            <span class="category-description__name">{{category}}</span>
+                {{#each this}}
+                <span class="category-description__name">{{category}}</span>
 
-            <a href="/{{category}}" class="{{category}}"> Дивитися
-                всі</a>
-            {{/each}}
+                <a href="/{{category}}" class="{{category}}"> Дивитися
+                    всі</a>
+                {{/each}}
             </div>
             <button type="button" class="category-btn btn-next swiper-button-next">
                 &gt;
@@ -26,10 +26,11 @@
 
                 <!-- Сюда нужно добавлять карточки категории -->
 
-                <li class="card__item category-cards__item slider-item swiper-slide" data-action={{category}}
-                    data-action={{description}} data-action={{phone}} data-action={{userId}}>
+                <li class="card__item card__item category-cards__item slider-item swiper-slide"
+                    data-category={{category}} data-description={{description}} data-phone={{phone}}
+                    data-userID={{userId}}>
                     <a class="card__link" href="">
-                        {{!-- <div class="card__img-wraper"> --}}
+                        <div class="card__img-wraper">
                             {{#each imageUrls}}<img class="card__img" src="{{this}}" alt="image">{{/each}}
                             <svg class="card__svg">
                                 <use href="../images/sprite/symbol-defs.svg#icon-heart"></use>
@@ -37,7 +38,7 @@
                             <svg class="card__svg2">
                                 <use href="../images/sprite/symbol-defs.svg#icon-fullscreen-24px-1"></use>
                             </svg>
-                        {{!-- </div> --}}
+                        </div>
                     </a>
 
                     <div class="card__text">
