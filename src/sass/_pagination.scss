@@ -3,13 +3,15 @@
   @extend %section-style;
 
   &__item {
+    
+    
     height: 100% !important;
     box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
     background-color: lavender;
     // width: 295px;
     @media screen and (min-width: 768px) {
     height: 350px;}
-  }
+    }
   &__text {
     padding: 20px;
   }
