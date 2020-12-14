@@ -16,6 +16,7 @@ function getUser(acces) {
     fetch("https://callboard-backend.herokuapp.com/user", requestOptions)
         .then(response => response.json())
         .then(result => {
+            
             console.log(result);
             if(result.message === 'Unauthorized'){
                 console.log('ошибкa');
